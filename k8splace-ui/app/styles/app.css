@@ -1,0 +1,4 @@
+.package-summary-row div[class^="col-"]  {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}

@@ -1,0 +1,4 @@
+<div class="col-md-8">
+  <button type="button" class="btn btn-default">{{#link-to "package" package}}{{package.name}}{{/link-to}}</button> <small>{{package.author}}</small>
+</div>
+<div class="col-md-2">{{#enumerate-me times=package.rating}} <span class="glyphicon glyphicon-star"></span>{{/enumerate-me}}</div>
