@@ -1,4 +1,17 @@
 .package-summary-row div[class^="col-"]  {
-  padding-top: 1em;
-  padding-bottom: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#newPackageNav {
+  margin-right: 2em;
+}
+
+#deislogo {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.tab-content {
+  margin-top: 1em;
 }

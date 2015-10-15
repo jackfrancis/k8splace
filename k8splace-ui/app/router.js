@@ -9,6 +9,7 @@ Router.map(function() {
   this.route('package', {
     path: '/packages/:package_id'
   });
+  this.route('new-package', {});
 });
 
 export default Router;

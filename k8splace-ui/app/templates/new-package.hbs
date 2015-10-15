@@ -1,0 +1,17 @@
+<h1>
+  <span class="label label-default">Create New Package</span>
+</h1>
+<hr>
+<form role="form">
+  <div class="form-group">
+    <label for="packageName">Package Name</label>
+    {{input type="text" class="form-control" id="packageName"
+      placeholder="Enter package name" value=name}}
+  </div>
+  <div class="form-group">
+    <label for="packageDescription">Short Description</label>
+    {{textarea type="text" rows="2" class="form-control" id="packageDescription"
+    placeholder="Enter package description" value=description}}
+  </div>
+  <button type="submit" class="btn btn-success" {{action "save"}}>Create</button>
+</form>

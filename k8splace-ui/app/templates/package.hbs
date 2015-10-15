@@ -1,6 +1,40 @@
-<ul>
-  <li>{{model.name}}</li>
-  <li>{{model.description}}</li>
-  <li>{{model.author}}</li>
-  <li>{{model.creationDate}}</li>
-</ul>
+<h1>
+  <span class="label label-info">{{model.name}}</span>
+  <pre class="pull-right">kp install {{model.name}}</pre>
+</h1>
+{{#enumerate-me times=model.rating}} <span class="glyphicon glyphicon-star"></span>{{/enumerate-me}}
+<div class="row package-summary-row">
+  <div class="col-md-6">
+    <h3>Description</h3>
+    <div>{{model.description}}</div>
+  </div>
+  <div class="col-md-3">
+    <h3>Last Updated</h3>
+    <div>{{model.lastUpdated}}</div>
+  </div>
+  <div class="col-md-3 text-right">
+    <h3>Downloads</h3>
+    <div>{{#if model.downloads}}{{model.downloads}}{{else}}0{{/if}}</div>
+  </div>
+</div>
+<div class="jumbotron">
+  <p>Thermomix ® is about making life better and easier. This is why we offer every customer access to a brilliant package of after-care services, educational resources and a support network led by your local Thermomix ® advisors.</p>
+  <p><a class="btn btn-primary btn-lg" role="button"><span class="glyphicon glyphicon-cloud-download"></span> Download Manifests</a></p>
+</div>
+{{#if model.releases}}
+  <ul class="nav nav-tabs">
+    {{#each model.releases as |release|}}
+      <li><a href="#release{{release.id}}" data-toggle="tab">{{release.version}}</a></li>
+    {{/each}}
+  </ul>
+  <ul class="tab-content">
+    {{#each model.releases as |release|}}
+      <div class="tab-pane" id="release{{release.id}}">
+        {{release.description}}
+      </div>
+    {{/each}}
+  </ul>
+  {{bootstrap-init}}
+{{else}}
+  <p>No releases</p>
+{{/if}}

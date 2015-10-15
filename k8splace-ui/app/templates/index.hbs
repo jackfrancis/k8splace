@@ -1,12 +1,8 @@
-<blockquote>
-  <p>Browse Kubernetes Workloads</p>
-</blockquote>
+<p>Browse Kubernetes Workloads</p>
 
-<div class="container">
-  <div class="row package-summary-row">
-    {{#each model as |package|}}
-      {{#package-summary package=package}}
-      {{/package-summary}}
-    {{/each}}
-  </div>
+<div class="row package-summary-row">
+  {{#each model as |package|}}
+    {{#package-summary package=package}}
+    {{/package-summary}}
+  {{/each}}
 </div>

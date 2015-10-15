@@ -8,5 +8,6 @@ export default DS.Model.extend({
   author: DS.attr('string'),
   creationDate: DS.attr('date'),
   rating: DS.attr(),
-  lastUpdate: DS.attr()
+  lastUpdated: DS.attr('date'),
+  downloads: DS.attr()
 });
